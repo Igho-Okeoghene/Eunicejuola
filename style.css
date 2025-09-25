@@ -6,36 +6,49 @@
   font-style: normal;
 }
 .container {
-  display: grid;
-  grid-template-areas:
-    "header header"
-    "image aboutme"
-    "hobbies aspirations"
-    "footer footer";
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-  gap: 20px;
   max-width: 100vw;
-  overflow-x: hidden;
-  max-height: 100vh;
+}
+header {
+  color: #333;
+  text-align: center;
+}
+ul {
+  line-height: 30px;
+  padding-top: 20px;
+}
+img {
+  max-width: 100vw;
+}
+.aboutme,
+.hobbies,
+.aspirations {
+  padding: 30px;
+}
+p {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  line-height: 20px;
+}
+footer {
+  padding: 10px 30px 10px 30px;
+  font-size: 10px;
+  text-align: center;
 }
 
-nav {
-  grid-area: header;
-  width: 100%;
-  height: 50px;
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  padding: 0 50px;
-  background-color: #fff;
-}
-nav li {
-  list-style: none;
-  display: inline;
-  margin-left: 30px;
-  font-weight: 600;
-  font-size: 16px;
-  color: #333;
-  cursor: pointer;
+@media screen and (min-width: 500px) {
+  ul {
+    display: flex;
+    justify-content: end;
+  }
+  li {
+    list-style: none;
+    padding-left: 10px;
+  }
+  a {
+    text-decoration: none;
+    color: #333;
+  }
+  a:hover {
+    color: aquamarine;
+  }
 }
